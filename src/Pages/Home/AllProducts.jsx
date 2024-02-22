@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import  { useContext, useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import { AuthContext } from '../../Provider/AuthProvider';
@@ -55,15 +55,15 @@ const AllProducts = () => {
         }
     }
     return (
-      <div className="max-w-7xl mx-auto">
-        <p className="text-center text-3xl mb-5 font-bold uppercase">
+      <div className="max-w-7xl mx-auto py-20">
+        <p className="text-center text-3xl mb-10 font-bold uppercase">
           Our Products
         </p>
         <div className="flex items-center justify-center">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-7">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             {products.map((product) => (
               <div key={product._id}>
-                <div className="card w-96 bg-base-100 shadow-xl">
+                <div className="card w-80 bg-base-100 shadow-xl">
                   <figure>
                     <img src={product.image} />
                   </figure>
