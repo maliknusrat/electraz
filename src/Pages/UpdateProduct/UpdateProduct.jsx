@@ -7,7 +7,7 @@ const UpdateProduct = () => {
     const n = useNavigate();
     const [product, setProduct] = useState(null);
     useEffect(() => {
-      fetch(`http://localhost:5000/product/${id}`)
+      fetch(`https://electraz-server.vercel.app/product/${id}`)
         .then((res) => res.json())
         .then((data) => setProduct(data));
     }, []);
@@ -34,7 +34,7 @@ const UpdateProduct = () => {
       console.log(newproduct);
 
       //send data to server
-      fetch(`http://localhost:5000/update-product/${id}`, {
+      fetch(`https://electraz-server.vercel.app/update-product/${id}`, {
         method: "PUT",
         headers: {
           "content-type": "application/json",

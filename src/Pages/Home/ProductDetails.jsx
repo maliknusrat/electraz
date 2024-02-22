@@ -7,13 +7,13 @@ const ProductDetails = () => {
     const n = useNavigate();
     const [product, setProduct] = useState(null);
     useEffect(() => {
-      fetch(`http://localhost:5000/product/${id}`)
+      fetch(`https://electraz-server.vercel.app/product/${id}`)
         .then(res => res.json())
         .then((data) => setProduct(data));
     }, []);
 
     const handleDelete = id => {
-        fetch(`http://localhost:5000/delete-product/${id}`)
+        fetch(`https://electraz-server.vercel.app/delete-product/${id}`)
             .then(res => res.json())
             .then(data => {
                 if (data.deletedCount > 0) {

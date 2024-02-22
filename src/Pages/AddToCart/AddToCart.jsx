@@ -6,7 +6,7 @@ const AddToCart = () => {
   const { user } = useContext(AuthContext);
     const [products, setProducts] = useState([]);
     useEffect(() => {
-      fetch(`http://localhost:5000/addToCart/${user?.email}`)
+      fetch(`https://electraz-server.vercel.app/addToCart/${user?.email}`)
         .then((res) => res.json())
         .then((data) => setProducts(data));
     }, []);
