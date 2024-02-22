@@ -5,6 +5,9 @@ import Discover from "./Discover";
 import OrderProcess from "./OrderProcess";
 import Subcription from "./Subcription";
 import AllProducts from './AllProducts';
+import Testimonial from "../../Testimonial/TEstimonial";
+
+
 
 
 const Home = () => {
@@ -12,10 +15,11 @@ const Home = () => {
         <div>
             <Banner></Banner>
             <Discover></Discover>
-            <AllProducts></AllProducts>
             <OrderProcess></OrderProcess>
             <Banner2></Banner2>
+            <Testimonial></Testimonial>
             <Categories></Categories>
+            <AllProducts></AllProducts>
             <Subcription></Subcription>
             
         </div>

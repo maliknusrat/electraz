@@ -15,12 +15,14 @@ import AddProduct from './Pages/AddProduct/AddProduct';
 import AddToCart from './Pages/AddToCart/AddToCart';
 import ProductDetails from './Pages/Home/ProductDetails';
 import UpdateProduct from './Pages/UpdateProduct/UpdateProduct';
+import Errror from './Error Page/Errror';
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Main></Main>,
+    errorElement: <Errror></Errror>,
     children:[
       {
        path:"/",

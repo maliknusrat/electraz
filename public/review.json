@@ -1,0 +1,50 @@
+[
+    {
+      "id":1,
+      "name": "Joy Mondol",
+      "details": "Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like). It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+      "rating": "3",
+      "img":"https://i.ibb.co/r5rZKhj/ashik.jpg",
+      "bg":"bg-slate-800"
+    },
+    {
+      "id": 2,
+      "name": "Sabbir Ahmed",
+      "details": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)",
+      "rating": "2",
+      "img": "https://i.ibb.co/5sCGQMx/t-shirt2.png",
+      "bg":"bg-[#304C62]"
+    },
+    {
+      "id": 3,
+      "name": "Mehedi Hasan Sagor",
+      "details": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)",
+      "rating": "5",
+      "img": "https://i.ibb.co/fYSyQ7S/professional.jpg",
+      "bg":"bg-[#5C677D]"
+    },
+    {
+      "id": 4,
+      "name": "Malik Nusrat Nahar Nuhin",
+      "details": "I found the product to be incredibly useful and easy to use. The interface is intuitive, and it has all the features I need. Highly recommend it!",
+      "rating": "4",
+      "img": "https://i.ibb.co/rf6D47R/KA-10.jpg",
+      "bg":"bg-[#99c3be]"
+    },
+    {
+      "id": 5,
+      "name": "Khaza Mohammad Tanzil",
+      "details": "I found the product to be incredibly useful and easy to use. The interface is intuitive, and it has all the features I need. Highly recommend it!",
+      "rating": "4",
+      "img": "https://i.ibb.co/r5rZKhj/ashik.jpg",
+      "bg": "bg-[#5C677D]"
+    },
+    {
+      "id": 6,
+      "name": "Thamid Istiak",
+      "details": "I found the product to be incredibly useful and easy to use. The interface is intuitive, and it has all the features I need. Highly recommend it!",
+      "rating": "4",
+      "img": "https://i.ibb.co/fYSyQ7S/professional.jpg",
+      "bg": "bg-[#033047]"
+    }
+]
