@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import  { useEffect, useState } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
@@ -34,20 +34,20 @@ const ProductDetails = () => {
     return (
       <div className="max-w-5xl mx-auto py-20">
         <div>
-          <div className="">
+          <div className="flex items-center justify-between">
             <div>
               <figure>
                 <img
                   src={product?.image}
                   alt="Shoes"
-                  className="rounded-lg w-[70%]"
+                  className="w-[500px]"
                 />
               </figure>
             </div>
-            <div className="pt-16">
+            <div className="w-[450px] pt-16">
               <h2 className="font-bold text-3xl">{product?.productName}</h2>
-              <p className="pt-3 text-2xl">{product?.price}</p>
-              <p className="pt-3 text-xl">{product?.brandName}</p>
+              <p className="pt-3 font-semibold text-2xl">Price: <span className='text-zinc-500 font-normal'>{product?.price}</span></p>
+              <p className="pt-3 font-semibold text-xl">Brand Name: <span className='text-zinc-500 font-normal'>{product?.brandName}</span></p>
               <p className="pt-3 text-xl text-justify">{product?.details}</p>
               <div className="pt-16 flex justify-end gap-7">
                 <Link to={`/updateProduct/${product?._id}`} className="btn btn-primary text-xl">Update</Link>
