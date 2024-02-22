@@ -13,7 +13,7 @@ const AddProduct = () => {
         const image = form.image.value;
         const category = form.category.value;
         const price = form.price.value;
-        const Rating = form.Rating.value;
+        const Rating = form.rating.value;
         const brandName = form.brandName.value;
         const details = form.details.value;
         const email = user?.email;
@@ -24,27 +24,26 @@ const AddProduct = () => {
         console.log(newproduct);
 
         //send data to server
-        fetch('', {
-            method:'POST',
-            headers:{
-                'content-type': 'application/json'
-            },
-            body:JSON.stringify(newproduct)
-        } )
-        .then(res=>res.json()
-        .then(data => {
+        fetch("http://localhost:5000/products", {
+          method: "POST",
+          headers: {
+            "content-type": "application/json",
+          },
+          body: JSON.stringify(newproduct),
+        }).then((res) =>
+          res.json().then((data) => {
             console.log(data);
-            if(data.insertedId){
-                form.reset();
-                Swal.fire({
-                    title:'Success!',
-                    text:'product Added Successfully',
-                    icon:'success',
-                    confirmButtonText:'Cool!!!'
-
-                })
+            if (data.insertedId) {
+              form.reset();
+              Swal.fire({
+                title: "Success!",
+                text: "product Added Successfully",
+                icon: "success",
+                confirmButtonText: "Cool!!!",
+              });
             }
-        }))
+          })
+        );
     }
     return (
         <div>
@@ -71,7 +70,7 @@ const AddProduct = () => {
                                 <option>Type</option>
                                 <option value='SmartPhones'>Smart Phones</option>
                                     <option value='Laptop'>Laptop</option>
-                                    <option value='Watchs'>Watchs</option>
+                                    <option value='Watches'>Watchs</option>
                                     <option value='HeadPhones'>Head Phones</option>
                                     <option value='Tablet'>Tablet</option>
                             </select>
@@ -79,7 +78,7 @@ const AddProduct = () => {
                     </div>
 
                         <div className="form-control">
-                            <input type="text" name='Price' placeholder="Price" className="input input-bordered border-black rounded-none" required />
+                            <input type="text" name='price' placeholder="Price" className="input input-bordered border-black rounded-none" required />
                         </div>
                         <div className="form-control">
                             <input type="text" name='rating' placeholder="Rating" className="input input-bordered border-black rounded-none" required />

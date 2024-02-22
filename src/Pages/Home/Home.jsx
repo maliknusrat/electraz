@@ -4,6 +4,7 @@ import Categories from "./Categories";
 import Discover from "./Discover";
 import OrderProcess from "./OrderProcess";
 import Subcription from "./Subcription";
+import AllProducts from './AllProducts';
 
 
 const Home = () => {
@@ -11,6 +12,7 @@ const Home = () => {
         <div>
             <Banner></Banner>
             <Discover></Discover>
+            <AllProducts></AllProducts>
             <OrderProcess></OrderProcess>
             <Banner2></Banner2>
             <Categories></Categories>

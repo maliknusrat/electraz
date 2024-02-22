@@ -22,21 +22,40 @@ const Navbar = () => {
     <li><NavLink to='/' className={({ isActive }) => isActive ? "text-red-600 underline font-bold" : ''}>Home</NavLink></li>
     <li><NavLink to='/addProduct' className={({ isActive }) => isActive ? "text-red-600 underline font-bold" : ''}>Add Product</NavLink></li>
   </>
-  const navEndlinks = <>
-    {user ? <div className="flex flex-col md:flex-row items-start md:items-center justify-center gap-4 ">
-      <p className='w-[150px]'>{user.displayName}</p>
-      <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-        <div className="w-10 rounded-full">
-          <Image
-            // width={200}
-            src={user.photoURL}
-          />
+  const navEndlinks = (
+    <>
+      {user ? (
+        <div className="flex flex-col md:flex-row items-start md:items-center justify-center gap-4 ">
+          <p className="w-[150px]">{user.displayName}</p>
+          <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+            <div className="w-10 rounded-full">
+              <Image
+                // width={200}
+                src={user.photoURL}
+              />
+            </div>
+          </label>
+          <UserDeleteOutlined
+            onClick={logoutHandler}
+            className=" text-2xl hover:text-slate-800"
+          ></UserDeleteOutlined>
         </div>
-      </label>
-      <UserDeleteOutlined onClick={logoutHandler} className=" text-2xl hover:text-slate-800"></UserDeleteOutlined></div> : <NavLink to='/login' className={({ isActive }) => isActive ? "text-red-600 underline" : ''}> <UserOutlined className="text-2xl"></UserOutlined></NavLink>}
-    <NavLink className="text-2xl" to=''><ShoppingCartOutlined /></NavLink>
-
-  </>
+      ) : (
+        <NavLink
+          to="/login"
+          className={({ isActive }) =>
+            isActive ? "text-red-600 underline" : ""
+          }
+        >
+          {" "}
+          <UserOutlined className="text-2xl"></UserOutlined>
+        </NavLink>
+      )}
+      <NavLink className="text-2xl" to="/addToCart">
+        <ShoppingCartOutlined />
+      </NavLink>
+    </>
+  );
 
   return (
     <div className=''>
