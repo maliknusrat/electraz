@@ -6,23 +6,21 @@ import OrderProcess from "./OrderProcess";
 import Subcription from "./Subcription";
 import AllProducts from './AllProducts';
 import Testimonial from "../../Testimonial/TEstimonial";
-
-
-
+import ContactUs from "./Contact";
 
 const Home = () => {
     return (
-        <div>
-            <Banner></Banner>
-            <Discover></Discover>
-            <OrderProcess></OrderProcess>
-            <Banner2></Banner2>
-            <Testimonial></Testimonial>
-            <Categories></Categories>
-            <AllProducts></AllProducts>
-            <Subcription></Subcription>
-            
-        </div>
+      <div>
+        <Banner></Banner>
+        <OrderProcess></OrderProcess>
+        <Discover></Discover>
+        <Banner2></Banner2>
+        <Testimonial></Testimonial>
+        <Categories></Categories>
+        <AllProducts></AllProducts>
+        <Subcription></Subcription>
+        <ContactUs></ContactUs>
+      </div>
     );
 };
 
